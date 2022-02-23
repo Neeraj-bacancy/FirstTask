@@ -27,10 +27,11 @@ $(".theme--switcher").click(function(){
 //Scroll spy
 $(window).scroll(function() {
     ScrollTop = $(this).scrollTop();
+    let headerHeight = $(".header").outerHeight();
     $(".header nav ul li a").each(function() {
       currentlink = $(this);
       if(currentlink.attr("data-attr") != undefined) {
-          if($(currentlink.attr("data-attr")).offset().top <=  ScrollTop){
+          if($(currentlink.attr("data-attr")).offset().top - headerHeight <=  ScrollTop){
             $(".header nav ul li a").removeClass("nav__active");
             currentlink.addClass("nav__active");
           }
@@ -44,11 +45,12 @@ $(window).scroll(function() {
   const nav = $("header nav");
   $(document).ready(function() {
       $(".header nav ul li a").click(function(e) {
+        let headerHeight = $(".header").outerHeight();
         e.stopPropagation();
         currentlink = $(this);
         if(currentlink.attr("data-attr") != undefined) {
         var refElement = $(currentlink.attr("data-attr"));
-        var top = refElement.offset().top;
+        var top = refElement.offset().top - headerHeight;
         $("HTML, BODY").animate({ scrollTop: top }, 1000)
       }
       });

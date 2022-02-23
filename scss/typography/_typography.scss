@@ -18,7 +18,7 @@
     --heading-two-mobile: 1.813rem;
     --primary-font: 'source_sans_proregular',"Roboto","Helvetica Neue",Arial,sans-serif;
     --primary-bold: 'source_sans_probold', "Roboto","Helvetica Neue",Arial,sans-serif ;
-    --primary-light: 'source_sans_prolight' "Roboto","Helvetica Neue",Arial,sans-serif;
+    --primary-light: 'source_sans_prolight', "Roboto","Helvetica Neue",Arial,sans-serif;
     --auto-grid-min-size: 12.4rem;
 } 
 body.dark {
@@ -35,6 +35,10 @@ body {
     font-size: var(--base-font);
     color: var(--secondary-color);
     font-family: var(--primary-font);
+    padding-top: base.toRem(60);
+    @include base.tablet-up {
+        padding-top: base.toRem(93);
+    }
 }
 h1, .h1, %h1 {
     font-size: clamp(var(--heading-one-mobile), 10vw, var(--heading-one));
