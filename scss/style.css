@@ -678,6 +678,10 @@ a:focus, button:focus, [role=button]:focus, input:focus, textarea:focus {
   position: relative;
   color: var(--color-white);
 }
+.contact h2 {
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
 
 .form {
   display: grid;

@@ -23,7 +23,7 @@
                 <ul>
                     <li><a href="#"  title="Visit the home page" aria-label="Click here to visit home page" data-attr ="#home" class="nav__active">Home</a></li>
                     <li><a href="#"  title="Go to the About us" aria-label="Click here to Go About us">About Us</a></li>
-                    <li class="menu"><a href="#"  title="Go to the services" aria-label="Click here to Go Services" data-attr ="#services">Services  <button class="expand-icon" aria-expanded="false" aria-label="click here to expend menu"></button></a>
+                    <li class="menu"><a href="#"  title="Go to the services" aria-label="Click here to Go Services" data-attr ="#services">Services  <span role = "button" tabindex = "0" class="expand-icon" aria-expanded="false" aria-label="click here to expend menu"></span></a>
                         <div role="navigation" class="sub-menu">
                             <ul>
                                 <li><a href="#"  title="Go to the service one" aria-label="Click here to Go Service one">Service one</a></li>
@@ -77,7 +77,7 @@
                      </div>
                  </div>
              </div>
-             <div class="slider--control" aria-label="navigation">
+             <div class="slider--control">
                  <ul>
                     <li><button class="slider--dot slider--dot__active" data-dot="slide1" aria-labelledby="bannerSlider"></button></li>
                     <li><button class="slider--dot" data-dot="slide2" aria-labelledby="bannerSlider"></button></li>
@@ -124,17 +124,17 @@
             <h2 class="sr-only">Our brands</h2>
             <div class="container">
                 <div class="tab--line" aria-label="tablist for brand and partner" role="tablist">
-                     <button role="tab" aria-selected="true"  aria-controls="tab1-content1" tab-id="tab1" id="tab1" class="h2 tab--link tab__active">Barnds</button>
-                     <button role="tab" aria-selected="false" aria-controls="tab1-content2" tabindex="-1" id="tab2" tab-id="tab2" class="h2 tab--link">Partners</button>
+                     <button role="tab" aria-selected="true"  aria-controls="tab1-content1" data-tabid="tab1" id="tab1" class="h2 tab--link tab__active">Barnds</button>
+                     <button role="tab" aria-selected="false" aria-controls="tab1-content2" tabindex="-1" id="tab2" data-tabid="tab2" class="h2 tab--link">Partners</button>
                 </div>
-                <div class="brands tab--content  tab__active" id="tab1-content1" tab-id="tab1" role="tabpanel" aria-labelledby="tab1" tabindex="0">
+                <div class="brands tab--content  tab__active" id="tab1-content1" data-tabid="tab1" role="tabpanel" aria-labelledby="tab1" tabindex="0">
                     <img src="images/brand_1.png" alt="brand one" width="186" height="70">
                     <img src="images/brand_2.png" alt="brand two" width="186" height="70">
                     <img src="images/brand_3.png" alt="brand three" width="186" height="70">
                     <img src="images/brand_4.png" alt="brand four" width="186" height="70">
                     <img src="images/brand_5.png" alt="brand five" width="186" height="70">
                  </div>
-                 <div class="partners tab--content" id="tab1-content2" tab-id="tab2" role="tabpanel" aria-labelledby="tab2" tabindex="0">
+                 <div class="partners tab--content" id="tab1-content2" data-tabid="tab2" role="tabpanel" aria-labelledby="tab2" tabindex="0">
                      <img src="images/brand_5.png" alt="brand five" width="186" height="70">
                      <img src="images/brand_4.png" alt="brand four" width="186" height="70">
                      <img src="images/brand_3.png" alt="brand three" width="186" height="70">
@@ -147,7 +147,8 @@
         <section class="contact" id="contact">
             <span id="frm--error"></span>
             <div class="container">
-                <form action="" class="form validate" id="formvalidate">
+                <h2 class="text-center">Inquiry Now</h2>
+                <form action="#" class="form validate" id="formvalidate">
                         <div class="form--item">
                             <label for="fullname" class="sr-only"> Enter Full name</label>
                             <input type="text" name="fullname" id="fullname" placeholder="Full name" class="reqired">
@@ -166,7 +167,7 @@
                           <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" class="reqired">
                          </div>
                          <div class="form--item form--textarea reqired">
-                             <label for="comment"  class="sr-only"> 150 / 200 shold contain character</span></label>
+                             <label for="comment"  class="sr-only"> 150 / 200 shold contain character</label>
                              <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Cooments" class="reqired"></textarea>
                              <span>150 / 200  (Run time character count)</span>
                          </div>

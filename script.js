@@ -115,6 +115,24 @@ $(window).scroll(function() {
           $(this).parent().next().toggleClass("sub-menu__open");
       })
     })
+    $(".expand-icon").on('keyup',function(e) {
+        if(e.keyCode == 13) {
+            e.stopPropagation();
+            if($(this).hasClass("expended")) {
+            $(this).attr({
+                'aria-expanded':false,
+                'aria-label': 'click here to close menu'
+            });
+        } else {
+            $(this).attr({
+            'aria-expanded':true,
+            'aria-label': 'click here to open menu'
+        });
+        }
+        $(this).toggleClass("expended");
+        $(this).parent().next().toggleClass("sub-menu__open");
+    }
+  })
     function openNav() {
         hamburger.toggleClass("hamburger__active");
         nav.toggleClass("nav__open");
@@ -169,14 +187,14 @@ $(window).scroll(function() {
 
 for (var i = 0 ; i < linkTab.length; i++) {
     linkTab[i].addEventListener("click", function() {
-        let tabContent = document.querySelectorAll("[tab-id]");
+        let tabContent = document.querySelectorAll("[data-tabid]");
 
         tabContent.forEach(function(value, index, arr) {
             arr[index].classList.remove("tab__active")
         });
         this.classList.add("tab__active");
-        let tabLink = this.getAttribute("tab-id");
-        let linkedTab = document.querySelector(`.tab--content[tab-id=${tabLink}]`);
+        let tabLink = this.getAttribute("data-tabid");
+        let linkedTab = document.querySelector(`.tab--content[data-tabid=${tabLink}]`);
         linkedTab.classList.add("tab__active");
     })
 }
