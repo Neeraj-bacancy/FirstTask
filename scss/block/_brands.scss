@@ -1,0 +1,49 @@
+@use '../base';
+@use '../typography';
+
+.tab {
+    &--content {
+        display: none;
+        &.tab__active {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+            grid-gap: base.toRem(20);
+            justify-items: center;
+        }
+        img {
+            max-height: base.toRem(80);
+            display: block;
+        }
+    }
+    &--line {
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        margin-bottom: base.toRem(60);
+    }
+    &--link {
+        display: inline-block;
+        padding-bottom: base.toRem(30);
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        font-size: clamp(24px, 8vw, var(--heading-two));
+        &:not(:last-child) {
+            margin-right: base.toRem(50);
+        }
+        &.tab__active {
+            color: var(--golden-color);
+            &::after {
+                content: "";
+                width: base.toRem(16);
+                height: base.toRem(16);
+                border-radius: 50%;
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: var(--golden-color);
+            }
+        }
+    }
+}

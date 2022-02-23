@@ -1,0 +1,32 @@
+@mixin background() {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    
+    
+@function toRem($value) {
+    @if(round($value) == $value) {
+        @return ($value/16)+ rem;
+    }@else {
+        @error "value must be a number.";
+    }
+} 
+
+@mixin flex() {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+  @mixin mobile-up {
+    @media (min-width: 768px) { @content; }
+  }
+  @mixin tablet-up {
+    @media (min-width: 992px) { @content; }
+  }
+  @mixin laptop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin desktop-up {
+    @media (min-width: 1600px) { @content; }
+  }

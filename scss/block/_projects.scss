@@ -1,0 +1,95 @@
+@use '../base';
+@use '../typography';
+.project {
+    &--tiles {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        @include base.mobile-up {
+            grid-template-columns: 1fr 1fr ;
+        } 
+        @include base.tablet-up {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .h3 {
+        color: var(--golden-color);
+        margin-bottom: base.toRem(40);
+    }
+}
+.tile {
+    min-height: base.toRem(265);
+    display: grid;
+    align-items: flex-end;
+    padding: 10px;
+    transition: .1s linear;
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &--first {
+        @include base.mobile-up {
+            grid-area: 1/1/3/3;
+        }
+        @include base.tablet-up {
+          grid-area: 1/1/4/2;
+        }
+    }
+    &--second {
+        @include base.mobile-up {
+            grid-area: 3/1/4/3;
+        }
+        @include base.tablet-up {
+          grid-area: 1/2/3/4;
+        }
+    }
+    &--text {
+        padding:  10px;
+        font-size: base.toRem(15);
+        line-height: base.toRem(22);
+        background-color: var(--color-white);
+        display: flex;
+        align-items: center;
+        transition: .1s linear;
+        max-width: base.toRem(370);
+    }
+    img {
+        margin-right: base.toRem(24);
+    }
+    &:hover {
+        align-items: center;
+        justify-content: center;
+        .tile--text {
+            background-color: initial;
+            text-align: center;
+            color: var(--color-white);
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            img {
+                max-width: base.toRem(60);
+                filter: invert(1);
+                margin-bottom: 10px;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0,135,121,.96);
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 5px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            border: 5px solid var(--color-white);
+        }
+    }
+}

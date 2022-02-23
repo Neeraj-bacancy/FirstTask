@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <a class="skip-text sr-only" href="#main">Skip to content</a>
+    <header class="header" id="home">
+        <div class="container">
+            <div class="header--logo">
+                <h1>
+                 <a href="#" title="Visit the home page" aria-label="Click here to visit home page">
+                     <img src="images/Logo.png" alt="Digital design logo" width="176" height="63">
+                    </a>
+                </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"  title="Visit the home page" aria-label="Click here to visit home page" data-attr ="#home" class="nav__active">Home</a></li>
+                    <li><a href="#"  title="Go to the About us" aria-label="Click here to Go About us">About Us</a></li>
+                    <li class="menu"><a href="#"  title="Go to the services" aria-label="Click here to Go Services" data-attr ="#services">Services  <button class="expand-icon" aria-expanded="false" aria-label="click here to expend menu"></button></a>
+                        <div role="navigation" class="sub-menu">
+                            <ul>
+                                <li><a href="#"  title="Go to the service one" aria-label="Click here to Go Service one">Service one</a></li>
+                                <li><a href="#"  title="Go to the service two" aria-label="Click here to Go Service two">Service two</a></li>
+                                <li><a href="#"  title="Go to the service three" aria-label="Click here to Go Service three">Service three</a></li>
+                                <li><a href="#"  title="Go to the service four" aria-label="Click here to Go Service four">Service four</a></li>
+                                <li><a href="#"  title="Go to the service five" aria-label="Click here to Go Service one">Service five</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"  title="Go to the Partners" aria-label="Click here to Go partners" data-attr ="#partner">Partners</a></li>
+                    <li><a href="#"  title="Go to the Media" aria-label="Click here to Go Media">Media</a></li>
+                    <li><a href="#"  title="Go to the contact" aria-label="Click here to Go contact" data-attr="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="theme--switcher" title = "Swich theme" data-theme="light"><img class="light-theme"
+                src="images/themeicon.svg" alt="Theme Light"><img class="dark-theme"
+                src="images/themeicon-dark.svg" alt="Theme Light"><span class="sr-only">click here to switch into theme into dark mode</span></button>
+                <div class="hamburger" tabindex="0" aria-expanded="false" aria-label="click here to expend menu">
+                    <span class= "hamburger--line"></span>
+                    <span class="hamburger--line"></span>
+                    <span class="hamburger--line"></span>
+                </div>
+            </div>
+    </header>
+    <div id="main">
+        <section class="banner slider section-margin" id="bannerSlider" aria-roledescription ="slideshow" aria-label="product item slider" >
+             <div class="slider--content">
+                 <div class="slider--slide slider--slide__active" style="background-image:url('images/banner_1.jpg')" data-slide="slide1">
+                     <div class="container">
+                         <div class="slider--text">
+                             <h2 class="h1">Lorem ipsum</h2>
+                             <h3 class="h2">Lorem ipsum dolor sit amet consectetur adipiscing elit...</h3>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="slider--slide" style="background-image:url('images/banner_2.jpg')" data-slide="slide2">
+                     <div class="container">
+                         <div class="slider--text">
+                             <h2 class="h1">Lorem ipsum</h2>
+                             <h3 class="h2">Lorem ipsum dolor sit amet consectetur adipiscing elit...</h3>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="slider--slide" style="background-image:url('images/banner_3.jpg')" data-slide="slide3">
+                     <div class="container">
+                         <div class="slider--text">
+                             <h2 class="h1">Lorem ipsum</h2>
+                             <h3 class="h2">Lorem ipsum dolor sit amet consectetur adipiscing elit...</h3>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="slider--control" aria-label="navigation">
+                 <ul>
+                    <li><button class="slider--dot slider--dot__active" data-dot="slide1" aria-labelledby="bannerSlider"></button></li>
+                    <li><button class="slider--dot" data-dot="slide2" aria-labelledby="bannerSlider"></button></li>
+                    <li><button class="slider--dot" data-dot="slide3" aria-labelledby="bannerSlider"></button></li>
+                 </ul>
+             </div>
+        </section>
+        <section class="project section-margin" id="services">
+            <div class="container">
+                <h2 class="text-center h3">Most Recent projects</h2>
+                <div class="project--tiles">
+                    <div class="tile tile--first" style="background-image: url('images/project_img_1.jpg');">
+                        <div class="tile--text">
+                            <img src="images/icon_1.svg" alt= "user icon">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <a class="cover--link" href="javascript:;"  title="Visit the prohject page one" aria-label="Click here to visit project page one"></a>
+                    </div>
+                    <div class="tile tile--second" style="background-image: url('images/project_img_2.jpg');">
+                        <div class="tile--text">
+                            <img src="images/icon_2.svg" alt= "user icon">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <a class="cover--link" href="javascript:;"  title="Visit the prohject page two" aria-label="Click here to visit project page two"></a>
+                    </div>
+                    <div class="tile tile-third" style="background-image: url('images/project_img_3.jpg');">
+                        <div class="tile--text">
+                            <img src="images/icon_3.svg" alt= "user icon">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <a class="cover--link" href="javascript:;"  title="Visit the prohject page three" aria-label="Click here to visit project page three"></a>
+                    </div>
+                    <div class="tile tile-four" style="background-image: url('images/project_img_4.jpg');">
+                        <div class="tile--text">
+                            <img src="images/icon_4.svg" alt= "user icon">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <a class="cover--link" href="javascript:;"  title="Visit the prohject page four" aria-label="Click here to visit project page four"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tab  section-margin" id="partner">
+            <h2 class="sr-only">Our brands</h2>
+            <div class="container">
+                <div class="tab--line" aria-label="tablist for brand and partner" role="tablist">
+                     <button role="tab" aria-selected="true"  aria-controls="tab1-content1" tab-id="tab1" id="tab1" class="h2 tab--link tab__active">Barnds</button>
+                     <button role="tab" aria-selected="false" aria-controls="tab1-content2" tabindex="-1" id="tab2" tab-id="tab2" class="h2 tab--link">Partners</button>
+                </div>
+                <div class="brands tab--content  tab__active" id="tab1-content1" tab-id="tab1" role="tabpanel" aria-labelledby="tab1" tabindex="0">
+                    <img src="images/brand_1.png" alt="brand one">
+                    <img src="images/brand_2.png" alt="brand two">
+                    <img src="images/brand_3.png" alt="brand three">
+                    <img src="images/brand_4.png" alt="brand four">
+                    <img src="images/brand_5.png" alt="brand five">
+                 </div>
+                 <div class="partners tab--content" id="tab1-content2" tab-id="tab2" role="tabpanel" aria-labelledby="tab2" tabindex="0">
+                     <img src="images/brand_5.png" alt="brand five">
+                     <img src="images/brand_4.png" alt="brand four">
+                     <img src="images/brand_3.png" alt="brand three">
+                     <img src="images/brand_2.png" alt="brand two">
+                     <img src="images/brand_1.png" alt="brand one">
+                  </div>
+                
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <span id="frm--error"></span>
+            <div class="container">
+                <form action="" class="form validate">
+                        <div class="form--item reqired">
+                            <label for="fullname" class="sr-only"> Enter Full name</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Full name">
+                        </div>
+                        <div class="form--item reqired">
+                         <label for="email"  class="sr-only"> Enter email address</label>
+                         <input type="email" name="email" id="email" placeholder="Email Address">
+                      </div>
+                         <div class="form--item reqired">
+                             <label for="password"  class="sr-only"> password 8 digit password with must use of some special characters such as ~!@#$%^&*_</label>
+                             <input type="password" name="password" id="password" placeholder="password">
+                             <span>8 digit password with must use of some special characters such as ~!@#$%^&*_</span>
+                         </div>
+                         <div class="form--item reqired">
+                          <label for="confirmPassword"  class="sr-only">confirm password</label>
+                          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password">
+                         </div>
+                         <div class="form--item form--textarea reqired">
+                             <label for="comment"  class="sr-only"> 150 / 200 shold contain character</span></label>
+                             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Cooments"></textarea>
+                             <span>150 / 200  (Run time character count)</span>
+                         </div>
+                     <div class="form--item form--button">
+                        <input type="submit" class="btn" value="SUBMIT" id="submit-btn" disabled>
+                     </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
