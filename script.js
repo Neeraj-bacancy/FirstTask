@@ -188,7 +188,7 @@ const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
 const comment = document.querySelector("#comment");
 const infoText = document.querySelector("#frm--error");
-let flag = false;
+const submitBtn = document.querySelector("#submit-btn");
 fullName.addEventListener("blur", () => {
     if(fullName.value.trim()=="") {
         showalert("please enter your full name");
@@ -212,7 +212,7 @@ password.addEventListener("blur", () => {
     }
 })
 confirmPassword.addEventListener("blur", () => {
-    if(!(confirmPassword.value.toLowerCase() ===  password.value.toLowerCase())) {
+    if(!(confirmPassword.value ===  password.value)) {
         showalert("confirm pwassword and password must be same");
         return false;
     }
@@ -230,21 +230,18 @@ let showalert = (massage) => {
       infoText.style.display = "none";
     }, 5000);
   };
-//   $(fullName, email, password, confirmPassword, comment).bind('keyup', function() {
-//     console.log(disableBtn);
-// })
 
-
-// $(document).on('keyup', '.required', function(e){
-//     let Disabled = true;
-//     $(".required").each(function() {
-//         let value = this.value
-//         if ((value)&&(value.trim() !='') && value.length >= 150 && value.toLowerCase() ===  value.toLowerCase())
-//             {
-//               Disabled = false
-//             }else{
-//               Disabled = true
-//               return false
-//             }
-//       });
-// })
+  $(document).ready(function() {
+    $("#formvalidate").on('keyup', '.form--item .reqired', function(e){
+        let Disabled = true;
+        $(".form--item .reqired").each(function() {
+            let disableValue = !(fullName.value.trim()=="") && email.value.toLowerCase().match(emailRegex) && password.value.match(passwordRegex) && (confirmPassword.value ===  password.value) &&  (comment.value.length >= 150);
+            console.log(disableValue);
+            if(disableValue) {
+                submitBtn.removeAttribute("disabled")
+            }else {
+                submitBtn.setAttribute("disabled", true)
+            }
+          });
+        })
+})

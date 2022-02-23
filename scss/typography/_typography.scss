@@ -16,9 +16,9 @@
     --heading-two: 2.813rem;
     --heading-one-mobile: 3rem;
     --heading-two-mobile: 1.813rem;
-    --primary-font: 'source_sans_proregular';
-    --primary-bold: 'source_sans_probold';
-    --primary-light: 'source_sans_prolight';
+    --primary-font: 'source_sans_proregular',"Roboto","Helvetica Neue",Arial,sans-serif;
+    --primary-bold: 'source_sans_probold', "Roboto","Helvetica Neue",Arial,sans-serif ;
+    --primary-light: 'source_sans_prolight' "Roboto","Helvetica Neue",Arial,sans-serif;
     --auto-grid-min-size: 12.4rem;
 } 
 body.dark {

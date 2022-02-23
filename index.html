@@ -40,9 +40,9 @@
                 </ul>
             </nav>
             <button class="theme--switcher" title = "Swich theme" data-theme="light"><img class="light-theme"
-                src="images/themeicon.svg" alt="Theme Light"><img class="dark-theme"
-                src="images/themeicon-dark.svg" alt="Theme Light"><span class="sr-only">click here to switch into theme into dark mode</span></button>
-                <div class="hamburger" tabindex="0" aria-expanded="false" aria-label="click here to expend menu">
+                src="images/themeicon.svg" alt="Theme Light" width="25" height="25"><img class="dark-theme"
+                src="images/themeicon-dark.svg" width="25" height="25" alt="Theme Light"><span class="sr-only">click here to switch into theme into dark mode</span></button>
+                <div class="hamburger" role = "button" tabindex="0" aria-expanded="false" aria-label="click here to expend menu">
                     <span class= "hamburger--line"></span>
                     <span class="hamburger--line"></span>
                     <span class="hamburger--line"></span>
@@ -91,28 +91,28 @@
                 <div class="project--tiles">
                     <div class="tile tile--first" style="background-image: url('images/project_img_1.jpg');">
                         <div class="tile--text">
-                            <img src="images/icon_1.svg" alt= "user icon">
+                            <img src="images/icon_1.svg" alt= "user icon"  width="44" height="44">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <a class="cover--link" href="javascript:;"  title="Visit the prohject page one" aria-label="Click here to visit project page one"></a>
                     </div>
                     <div class="tile tile--second" style="background-image: url('images/project_img_2.jpg');">
                         <div class="tile--text">
-                            <img src="images/icon_2.svg" alt= "user icon">
+                            <img src="images/icon_2.svg" alt= "user icon" width="44" height="44">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <a class="cover--link" href="javascript:;"  title="Visit the prohject page two" aria-label="Click here to visit project page two"></a>
                     </div>
                     <div class="tile tile-third" style="background-image: url('images/project_img_3.jpg');">
                         <div class="tile--text">
-                            <img src="images/icon_3.svg" alt= "user icon">
+                            <img src="images/icon_3.svg" alt= "user icon"  width="44" height="44">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <a class="cover--link" href="javascript:;"  title="Visit the prohject page three" aria-label="Click here to visit project page three"></a>
                     </div>
                     <div class="tile tile-four" style="background-image: url('images/project_img_4.jpg');">
                         <div class="tile--text">
-                            <img src="images/icon_4.svg" alt= "user icon">
+                            <img src="images/icon_4.svg" alt= "user icon"  width="44" height="44">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <a class="cover--link" href="javascript:;"  title="Visit the prohject page four" aria-label="Click here to visit project page four"></a>
@@ -128,18 +128,18 @@
                      <button role="tab" aria-selected="false" aria-controls="tab1-content2" tabindex="-1" id="tab2" tab-id="tab2" class="h2 tab--link">Partners</button>
                 </div>
                 <div class="brands tab--content  tab__active" id="tab1-content1" tab-id="tab1" role="tabpanel" aria-labelledby="tab1" tabindex="0">
-                    <img src="images/brand_1.png" alt="brand one">
-                    <img src="images/brand_2.png" alt="brand two">
-                    <img src="images/brand_3.png" alt="brand three">
-                    <img src="images/brand_4.png" alt="brand four">
-                    <img src="images/brand_5.png" alt="brand five">
+                    <img src="images/brand_1.png" alt="brand one" width="186" height="70">
+                    <img src="images/brand_2.png" alt="brand two" width="186" height="70">
+                    <img src="images/brand_3.png" alt="brand three" width="186" height="70">
+                    <img src="images/brand_4.png" alt="brand four" width="186" height="70">
+                    <img src="images/brand_5.png" alt="brand five" width="186" height="70">
                  </div>
                  <div class="partners tab--content" id="tab1-content2" tab-id="tab2" role="tabpanel" aria-labelledby="tab2" tabindex="0">
-                     <img src="images/brand_5.png" alt="brand five">
-                     <img src="images/brand_4.png" alt="brand four">
-                     <img src="images/brand_3.png" alt="brand three">
-                     <img src="images/brand_2.png" alt="brand two">
-                     <img src="images/brand_1.png" alt="brand one">
+                     <img src="images/brand_5.png" alt="brand five" width="186" height="70">
+                     <img src="images/brand_4.png" alt="brand four" width="186" height="70">
+                     <img src="images/brand_3.png" alt="brand three" width="186" height="70">
+                     <img src="images/brand_2.png" alt="brand two" width="186" height="70">
+                     <img src="images/brand_1.png" alt="brand one" width="186" height="70">
                   </div>
                 
             </div>
@@ -147,27 +147,27 @@
         <section class="contact" id="contact">
             <span id="frm--error"></span>
             <div class="container">
-                <form action="" class="form validate">
-                        <div class="form--item reqired">
+                <form action="" class="form validate" id="formvalidate">
+                        <div class="form--item">
                             <label for="fullname" class="sr-only"> Enter Full name</label>
-                            <input type="text" name="fullname" id="fullname" placeholder="Full name">
+                            <input type="text" name="fullname" id="fullname" placeholder="Full name" class="reqired">
                         </div>
-                        <div class="form--item reqired">
+                        <div class="form--item">
                          <label for="email"  class="sr-only"> Enter email address</label>
-                         <input type="email" name="email" id="email" placeholder="Email Address">
+                         <input type="email" name="email" id="email" placeholder="Email Address" class="reqired">
                       </div>
-                         <div class="form--item reqired">
+                         <div class="form--item">
                              <label for="password"  class="sr-only"> password 8 digit password with must use of some special characters such as ~!@#$%^&*_</label>
-                             <input type="password" name="password" id="password" placeholder="password">
+                             <input type="password" name="password" id="password" placeholder="password" class="reqired">
                              <span>8 digit password with must use of some special characters such as ~!@#$%^&*_</span>
                          </div>
                          <div class="form--item reqired">
                           <label for="confirmPassword"  class="sr-only">confirm password</label>
-                          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password">
+                          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" class="reqired">
                          </div>
                          <div class="form--item form--textarea reqired">
                              <label for="comment"  class="sr-only"> 150 / 200 shold contain character</span></label>
-                             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Cooments"></textarea>
+                             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Cooments" class="reqired"></textarea>
                              <span>150 / 200  (Run time character count)</span>
                          </div>
                      <div class="form--item form--button">
