@@ -36,9 +36,17 @@
         @include base.tablet-up {
             display: inline-block;
         }
-        a {
+        a:not(.btn) {
             color: var(--secondary-color);
             text-decoration: none;
+        }
+        .btn {
+            display: block;
+            min-width: auto;
+            @include base.tablet-up {
+                margin-left: base.toRem(40);
+                display: inline-block;
+            }
         }
     }
     nav {
@@ -52,11 +60,12 @@
         width: 100%;
         @include base.tablet-up {
             display: block;
+            background-color: transparent;
             position: static;
             width: auto;
         }
        > ul > li {
-           > a {
+           > a:not(.btn) {
                padding: base.toRem(20) base.toRem(15);
                border-bottom: 6px solid transparent;
                font-weight: var(--font-bold);
@@ -71,7 +80,7 @@
            }
            &:hover,
            &:focus-within {
-               > a {
+               > a:not(.btn) {
                     @include base.tablet-up {
                         border-bottom-color: var(--primary-color);
                     }
@@ -87,8 +96,11 @@
         }
     }
     .nav {
-        &__active {
+        &__active:not(.btn) {
             color: var(--primary-color); 
+            @include base.tablet-up {
+                border-bottom-color: var(--primary-color);
+            }
         }
         &__open {
             display: block;
@@ -97,13 +109,13 @@
     .theme--switcher {
         margin-left: auto;
         margin-right: base.toRem(30);
-        top: 50%;
+        background-color: var(--color-white);
         position: static;
         @include base.tablet-up {
-            transform: translateY(-14px);
-            right: -20px;
-            position: absolute;
-            z-index: 2;
+            position: fixed;
+            bottom: 20px;
+            margin-right: 0;
+            right: 20px;
         }
     }
     .hamburger {

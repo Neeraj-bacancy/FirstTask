@@ -90,6 +90,22 @@ img {
     padding: base.toRem(10);
     min-width: base.toRem(170);
     cursor: pointer; 
+    text-decoration: none;
+    font-size: base.toRem(16);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white);
+    &:hover,&:focus {
+        background-color: transparent;
+        color: var(--color-white);
+    }
+    &--primary {
+         background-color: var(--primary-color);
+         color: var(--color-white);
+         border: 1px solid var(--primary-color);
+         &:hover, &:focus {
+            color: var(--primary-color);
+         }
+    }
 }
 a,button,[role="button"], input, textarea {
     &:focus {
@@ -146,7 +162,8 @@ a,button,[role="button"], input, textarea {
     }
 }
 :disabled {
-    pointer-events: none;
+    cursor: not-allowed;
+    opacity: .9;
 }
 #frm--error {
     position: absolute;
